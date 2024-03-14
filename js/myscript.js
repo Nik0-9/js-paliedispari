@@ -5,7 +5,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 let userWord = prompt('Inserisci una parola e ti dirò se è palindroma.');
 console.log(userWord);
-let result = palindrome(userWord);
+let result = palindrome(userWord.toLowerCase());
 
 if (result) {
     console.log(`la parola ${userWord} è palindroma`);
@@ -20,7 +20,7 @@ function palindrome(word) {
         reversedWord += userWord[i];
     }
     // console.log(reversedWord);
-    if (word === reversedWord) {
+    if (word === reversedWord.toLowerCase()) {
         return true;
     }
     return false;
@@ -41,7 +41,7 @@ while (choice != 'pari' && choice != 'dispari') {
     choice = prompt('Devi inserire "pari" o "dispari"');
 }
 let userNum = parseInt(prompt('Inserisci un numero da 1 a 5'));
-while (userNum > 5) {
+while (userNum < 1 || userNum > 5) {
     userNum = parseInt(prompt('Devi inserire un numero che va da 1 compreso a 5 compreso'));
 }
 console.log('user number ', userNum);
