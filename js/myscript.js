@@ -3,7 +3,7 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
-let userWord = prompt('Inserisci una parola e ti dirò se è palindroma.');
+const userWord = prompt('Inserisci una parola e ti dirò se è palindroma.');
 console.log(userWord);
 let result = palindrome(userWord.toLowerCase());
 
@@ -58,9 +58,9 @@ if (answer === choice) {
     console.log('hai perso');
 }
 
-function pariDispari(num) {
-    num = sum;
-    if (num % 2 === 0) {
+function pariDispari(sum) {
+    
+    if (sum % 2 === 0) {
         return 'pari';
     } else {
         return 'dispari';
